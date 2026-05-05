@@ -20,14 +20,6 @@ public class AdicionadorLinkCliente implements AdicionadorLink<Cliente> {
 	@Autowired
 	private AdicionadorLinkEndereco adicionadorLinkEndereco;
 
-
-	@Override
-	public void adicionarLink(List<Cliente> lista) {
-		for (Cliente cliente : lista) {
-			adicionarLink(cliente);
-		}
-	}
-
 	@Override
 	public void adicionarLink(Cliente objeto) {
 		Link linkProprio = WebMvcLinkBuilder

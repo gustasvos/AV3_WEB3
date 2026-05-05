@@ -10,14 +10,7 @@ import java.util.List;
 
 @Component
 public class AdicionadorLinkTelefone implements AdicionadorLink<Telefone> {
-
-    @Override
-    public void adicionarLink(List<Telefone> lista) {
-        for (Telefone telefone : lista) {
-            adicionarLink(telefone);
-        }
-    }
-
+    
     @Override
     public void adicionarLink(Telefone objeto) {
         Link linkProprio = WebMvcLinkBuilder

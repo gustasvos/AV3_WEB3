@@ -12,13 +12,6 @@ import java.util.List;
 public class AdicionadorLinkEmail implements AdicionadorLink<Email> {
 
     @Override
-    public void adicionarLink(List<Email> lista) {
-        for (Email emailEmail : lista) {
-            adicionarLink(emailEmail);
-        }
-    }
-
-    @Override
     public void adicionarLink(Email objeto) {
         long id = objeto.getId();
 
@@ -33,7 +26,7 @@ public class AdicionadorLinkEmail implements AdicionadorLink<Email> {
                 .linkTo(WebMvcLinkBuilder
                         .methodOn(EmailControle.class)
                         .obterEmails())
-                .withRel("emailEmails");
+                .withRel("emails");
 
         objeto.add(linkColecao);
     }

@@ -12,13 +12,6 @@ import java.util.List;
 public class AdicionadorLinkEndereco implements AdicionadorLink<Endereco> {
 
     @Override
-    public void adicionarLink(List<Endereco> lista) {
-        for (Endereco endereco : lista) {
-            adicionarLink(endereco);
-        }
-    }
-
-    @Override
     public void adicionarLink(Endereco objeto) {
         long id = objeto.getId();
 

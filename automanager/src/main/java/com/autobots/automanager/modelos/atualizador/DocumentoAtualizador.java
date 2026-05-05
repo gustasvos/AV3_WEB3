@@ -1,5 +1,6 @@
 package com.autobots.automanager.modelos.atualizador;
 
+import java.util.Collection;
 import java.util.List;
 
 import com.autobots.automanager.dto.DocumentoDTO;
@@ -23,7 +24,7 @@ public class DocumentoAtualizador {
 		}
 	}
 
-	public void atualizar(List<Documento> documentos, List<DocumentoDTO> atualizacoes) {
+	public void atualizar(Collection<Documento> documentos, Collection<DocumentoDTO> atualizacoes) {
 		if (atualizacoes == null) return;
 		for (DocumentoDTO dto : atualizacoes) {
 			if (dto.id() == null) continue;

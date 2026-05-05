@@ -1,5 +1,6 @@
 package com.autobots.automanager.modelos.atualizador;
 
+import java.util.Collection;
 import java.util.List;
 
 import com.autobots.automanager.dto.TelefoneDTO;
@@ -20,7 +21,7 @@ public class TelefoneAtualizador {
 		}
 	}
 
-	public void atualizar(List<Telefone> telefones, List<TelefoneDTO> atualizacoes) {
+	public void atualizar(Collection<Telefone> telefones, Collection<TelefoneDTO> atualizacoes) {
 		if (atualizacoes == null) return;
 		for (TelefoneDTO dto : atualizacoes) {
 			if (dto.id() == null) continue;

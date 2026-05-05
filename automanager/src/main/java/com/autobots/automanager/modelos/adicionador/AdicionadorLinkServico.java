@@ -12,13 +12,6 @@ import java.util.List;
 public class AdicionadorLinkServico implements AdicionadorLink<Servico> {
 
     @Override
-    public void adicionarLink(List<Servico> lista) {
-        for (Servico servico : lista) {
-            adicionarLink(servico);
-        }
-    }
-
-    @Override
     public void adicionarLink(Servico objeto) {
         long id = objeto.getId();
 

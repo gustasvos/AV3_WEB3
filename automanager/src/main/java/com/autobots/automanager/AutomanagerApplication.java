@@ -1,6 +1,7 @@
 package com.autobots.automanager;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,8 +103,8 @@ public class AutomanagerApplication {
 			credencialFuncionario.setInativo(false);
 			credencialFuncionario.setNomeUsuario("dompedrofuncionario");
 			credencialFuncionario.setSenha("123456");
-			credencialFuncionario.setCriacao(new Date());
-			credencialFuncionario.setUltimoAcesso(new Date());
+			credencialFuncionario.setCriacao(LocalDateTime.now());
+			credencialFuncionario.setUltimoAcesso(LocalDateTime.now().minusHours(1));
 
 			funcionario.getCredenciais().add(credencialFuncionario);
 
@@ -121,8 +122,8 @@ public class AutomanagerApplication {
 			credencialFornecedor.setInativo(false);
 			credencialFornecedor.setNomeUsuario("dompedrofornecedor");
 			credencialFornecedor.setSenha("123456");
-			credencialFornecedor.setCriacao(new Date());
-			credencialFornecedor.setUltimoAcesso(new Date());
+			credencialFornecedor.setCriacao(LocalDateTime.now());
+			credencialFornecedor.setUltimoAcesso(LocalDateTime.now().minusHours(1));
 
 			fornecedor.getCredenciais().add(credencialFornecedor);
 
@@ -179,8 +180,8 @@ public class AutomanagerApplication {
 			credencialCliente.setInativo(false);
 			credencialCliente.setNomeUsuario("dompedrocliente");
 			credencialCliente.setSenha("123456");
-			credencialCliente.setCriacao(new Date());
-			credencialCliente.setUltimoAcesso(new Date());
+			credencialCliente.setCriacao(LocalDateTime.now());
+			credencialCliente.setUltimoAcesso(LocalDateTime.now().minusHours(1));
 
 			cliente.getCredenciais().add(credencialCliente);
 
